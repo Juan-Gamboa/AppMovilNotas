@@ -3,6 +3,7 @@ package com.example.myapplicationnotaspromedio;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
+import android.icu.text.IDNA;
 import android.os.Bundle;
 import android.widget.Button;
 import android.widget.EditText;
@@ -31,7 +32,12 @@ public class LoginActivity extends AppCompatActivity {
             infoUsuario.setNombre(this.usuarioTxt.getText().toString());
             infoUsuario.setAsignatura(this.asigTxt.getText().toString());
             System.out.println("Estoy en infoUsuario " + infoUsuario.getNombre() + " "+ infoUsuario.getAsignatura());
+
             Intent intent = new Intent(this, MainActivity.class);
+            Bundle infoP = new Bundle();
+            infoP.putString("nombre",this.usuarioTxt.getText().toString());
+            infoP.putString("asignatura",this.asigTxt.getText().toString());
+            intent.putExtras(infoP);
             startActivity(intent);
         });
 

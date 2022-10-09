@@ -14,6 +14,7 @@ public class MainActivity extends AppCompatActivity {
     private EditText cantNotasEditTxt;
     private Button cantBtn;
     private Button regresarBtn;
+    public int cant;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -26,10 +27,14 @@ public class MainActivity extends AppCompatActivity {
         this.cantBtn.setOnClickListener(view -> {
 
             System.out.println(this.cantNotasEditTxt.getText());
-            CantidadNotas cantidadNotas = new CantidadNotas();
-            cantidadNotas.setCantidadNot(Integer.parseInt(this.cantNotasEditTxt.getText().toString()));
-            System.out.println("Estoy en CantidadNotas " + cantidadNotas.getCantidadNot());
+            cant = Integer.parseInt(this.cantNotasEditTxt.getText().toString());
             Intent intent = new Intent(this, PromedioActivity.class);
+            Bundle infoP = this.getIntent().getExtras();
+            Bundle infoC = new Bundle();
+            infoC.putString("nombre", infoP.getString("nombre"));
+            infoC.putString("asignatura", infoP.getString("asignatura"));
+            infoC.putInt("cantidadNotas",Integer.parseInt(this.cantNotasEditTxt.getText().toString()));
+            intent.putExtras(infoC);
             startActivity(intent);
         });
 
