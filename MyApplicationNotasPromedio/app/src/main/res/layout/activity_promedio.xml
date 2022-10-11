@@ -10,25 +10,30 @@
         android:id="@+id/frame"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        tools:context=".MainActivity">
+        tools:context=".MainActivity"
+        tools:layout_editor_absoluteX="36dp"
+        tools:layout_editor_absoluteY="148dp">
 
         <TextView
             android:id="@+id/ingresLb"
-            android:layout_width="177dp"
-            android:layout_height="40dp"
-            android:layout_marginTop="192dp"
-            android:text="Ingrese las notas a promediar:"
+            android:layout_width="343dp"
+            android:layout_height="61dp"
+            android:layout_marginTop="100dp"
+            android:text="Ingresa tus notas"
+            android:textSize="40sp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+            app:layout_constraintTop_toBottomOf="@+id/regresarBtn" />
 
         <EditText
             android:id="@+id/promedioEditTxt"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="20dp"
+            android:layout_marginTop="30dp"
             android:ems="10"
+            android:hint="Ej: 3.5"
             android:inputType="textPersonName"
+            android:textSize="24sp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/ingresLb" />
@@ -37,34 +42,36 @@
             android:id="@+id/promedioBtn"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="84dp"
+            android:layout_marginStart="80dp"
+            android:layout_marginTop="80dp"
+            android:layout_marginEnd="50dp"
             android:enabled="false"
             android:text="Promedio"
+            android:textSize="16sp"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.898"
-            app:layout_constraintStart_toEndOf="@+id/regresarBtn"
+            app:layout_constraintStart_toEndOf="@+id/siguiBtn"
             app:layout_constraintTop_toBottomOf="@+id/promedioEditTxt" />
 
         <Button
             android:id="@+id/regresarBtn"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="84dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="50dp"
             android:text="Regresar"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.053"
+            android:textSize="16sp"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/promedioEditTxt" />
+            app:layout_constraintTop_toTopOf="parent" />
 
         <Button
             android:id="@+id/siguiBtn"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="84dp"
+            android:layout_marginStart="50dp"
+            android:layout_marginTop="80dp"
             android:text="Siguiente"
-            app:layout_constraintEnd_toStartOf="@+id/promedioBtn"
-            app:layout_constraintHorizontal_bias="0.583"
-            app:layout_constraintStart_toEndOf="@+id/regresarBtn"
+            android:textSize="16sp"
+            app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/promedioEditTxt" />
     </androidx.constraintlayout.widget.ConstraintLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>

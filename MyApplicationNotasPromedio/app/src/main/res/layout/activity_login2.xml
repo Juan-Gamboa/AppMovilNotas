@@ -6,49 +6,77 @@
     android:layout_height="match_parent"
     tools:context=".LoginActivity">
 
-    <LinearLayout
-        android:layout_width="350dp"
-        android:layout_height="wrap_content"
-        android:orientation="vertical"
-        app:layout_constraintBottom_toBottomOf="parent"
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="251dp"
+        android:layout_height="133dp"
+        android:layout_marginTop="90dp"
+        android:layout_marginEnd="100dp"
+        android:text="¡Calcula tu promedio!"
+        android:textSize="48sp"
+        android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
+        app:layout_constraintTop_toTopOf="parent" />
 
-        <TextView
+    <EditText
+        android:id="@+id/usuarioTxt"
+        android:layout_width="387dp"
+        android:layout_height="62dp"
+        android:layout_marginTop="50dp"
+        android:ems="10"
+        android:hint="Ingresa tu nombre"
+        android:inputType="textPersonName"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView" />
+
+    <EditText
+        android:id="@+id/asigTxt"
+        android:layout_width="387dp"
+        android:layout_height="62dp"
+        android:layout_marginTop="20dp"
+        android:ems="10"
+        android:hint="Ingresa el nombre de la asignatura"
+        android:inputType="textPersonName"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/usuarioTxt" />
+
+    <Button
+        android:id="@+id/iniciarSesionBtn"
+        android:layout_width="310dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="25dp"
+        android:text="Iniciar Sesión"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/asigTxt" />
+
+    <!--<LinearLayout
+        android:layout_width="391dp"
+        android:layout_height="401dp"
+        android:layout_marginTop="250dp"
+        android:orientation="vertical"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">-->
+
+        <!--<TextView
             android:id="@+id/usuarioLb"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Usuario"
-            tools:text="Usuario" />
+            tools:text="Ingresa tu nombre completo"/> -->
 
-        <EditText
-            android:id="@+id/usuarioTxt"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:ems="10"
-            android:hint="Nombre"
-            android:inputType="textPersonName" />
-
-        <TextView
+        <!--<TextView
             android:id="@+id/asigLb"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Nombre Materia" />
+            android:text="Ingresa el nombre de la materia" />-->
 
-        <EditText
-            android:id="@+id/asigTxt"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:ems="10"
-            android:hint="Asignatura"
-            android:inputType="textPersonName" />
-
-        <Button
-            android:id="@+id/iniciarSesionBtn"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Iniciar Sesión" />
-
-    </LinearLayout>
+    <!--</LinearLayout>-->
 </androidx.constraintlayout.widget.ConstraintLayout>
