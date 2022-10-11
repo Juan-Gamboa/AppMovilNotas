@@ -8,7 +8,6 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
-import com.example.myapplicationnotaspromedio.modals.CantidadNotas;
 
 public class PromedioActivity extends AppCompatActivity {
 
@@ -30,12 +29,8 @@ public class PromedioActivity extends AppCompatActivity {
         this.promedioBtn = findViewById(R.id.promedioBtn);
         this.promedioBtn.setOnClickListener(view -> {
             valorN = infoP.getInt("cantidadNotas");
-            System.out.println(cont);
-            System.out.println(valorN);
             if (cont == valorN) {
                 //this.promedioEditTxt.setFocusable(false);
-                System.out.println("ya conte");
-                System.out.println(restprom/valorN);
                 promedio = restprom/valorN;
                 if (promedio >= 3) {
                     Toast.makeText(getApplicationContext(),"Felicidades "+infoP.getString("nombre")+
@@ -55,13 +50,9 @@ public class PromedioActivity extends AppCompatActivity {
 
         this.siguiBtn = findViewById(R.id.siguiBtn);
         this.siguiBtn.setOnClickListener(view -> {
-            System.out.println("estoy contando");
             valorN = infoP.getInt("cantidadNotas");
             cont++;
-            System.out.println(cont);
-            System.out.println(valorN);
             restprom += Double.parseDouble(this.promedioEditTxt.getText().toString());
-            System.out.println("promedio fuera if "+ restprom);
             Toast.makeText(getApplicationContext(),"Digite el siguiente numero",Toast.LENGTH_SHORT).show();
             if (cont == valorN) {
                 promedioBtn.setEnabled(true);

@@ -7,7 +7,6 @@ import android.os.Bundle;
 import android.widget.Button;
 import android.widget.EditText;
 
-import com.example.myapplicationnotaspromedio.modals.CantidadNotas;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -26,7 +25,6 @@ public class MainActivity extends AppCompatActivity {
         this.cantBtn = findViewById(R.id.promedioBtn);
         this.cantBtn.setOnClickListener(view -> {
 
-            System.out.println(this.cantNotasEditTxt.getText());
             cant = Integer.parseInt(this.cantNotasEditTxt.getText().toString());
             Intent intent = new Intent(this, PromedioActivity.class);
             Bundle infoP = this.getIntent().getExtras();
